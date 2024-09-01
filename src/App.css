@@ -1,0 +1,902 @@
+/* -------------------------------------------- Global Styles --------------------------------------------------------- */
+
+
+
+/* Anchor tags styling */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Unordered list styling */
+ul {
+  list-style: none;
+}
+
+/* ------------------------------------ Header Styling -------------------------------------------------------- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  backdrop-filter: blur(5px);
+  color: black;
+  z-index: 1000;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+header h1{
+  font-size: 1.7rem;
+}
+
+
+header ul {
+  display: flex;
+  gap: .7rem;
+}
+
+header ul li {
+  color: #fafafa;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+header ul li:hover{
+  color:#d1d1d1;
+}
+
+/* ----------------------------------------------- Footer Styling --------------------------------------------------------- */
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+  background-color: #020b18;
+  color: #ffffff;
+}
+
+footer p {
+  width: 70%;
+  margin: 2rem auto;
+  line-height: 1.5;
+  color: #bfbdbd;
+}
+
+footer ul {
+  display: flex;
+  gap: 1rem;
+}
+footer ul li{
+  color: #fff;
+}
+
+/* ------------------------------------------- Search Section Styling --------------------------------------------- */
+
+.search {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ececf2;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.search-component {
+  text-align: center;
+  padding: 2rem;
+  position: relative;
+  max-width: 600px; /* Limit the width for larger screens */
+  width: 100%;
+}
+
+.search-component h1 {
+  font-size: 3rem; /* Adjusted font size for better scaling */
+  margin-bottom: 1rem;
+  color: #fff;
+  font-weight: 700;
+}
+
+.search-component p {
+  margin-bottom: 1.5rem;
+  font-size: 1rem; /* Adjusted font size for better scaling */
+  color: #bfbaba;
+  line-height: 1.6;
+}
+
+.search-component form {
+  width: 100%;
+  display: flex;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  overflow: hidden;
+  background-color: #f7f7f9;
+}
+
+.search-component form input {
+  padding: 1rem;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  flex: 1;
+  font-size: 1rem;
+  outline: none;
+  background-color: transparent;
+  color: #333;
+}
+
+.search-component form input::placeholder {
+  color: #999;
+}
+
+.search-component form button {
+  border: none;
+  border-radius: 0 50px 50px 0;
+  padding: 1rem 2rem;
+  background: linear-gradient(98.37deg, #f89e00 .99%, #da2f68);
+  color: #ffffff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.search-component form button:hover {
+  background-color: #04152d;
+}
+
+.search-component form button:active {
+  transform: translateY(0);
+}
+/* --------------------------------------------------------- Tv shows -------------------------------------------------------------------- */
+.tv-container {
+  background-color: #04152d;
+}
+.tv-container {
+  background-color: #04152d;
+  padding-top: 60px;
+}
+
+.tv-container h1 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.tvshow-container {
+  display: flex;
+  gap: 20px; /* Gap between cards */
+  flex-wrap: wrap;
+  justify-content: space-between; /* Align cards with space in-between */
+  width: 85%; /* Set the width of the container to 85% of the parent */
+  margin: 0 auto; /* Center align the container */
+  padding: 20px; /* Optional padding around the container */
+  box-sizing: border-box; /* Ensure padding is included in the width */
+  overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.tvshow-card {
+  flex: 0 0 calc(20% - 20px);
+  box-sizing: border-box;
+  overflow: hidden;
+  border-radius: 15px; /* Ensure border-radius is maintained */
+  transition: transform 0.3s, box-shadow 0.3s;
+  background-color: transparent; /* Set a background color to avoid overflow effects */
+}
+
+/* Media Query for Tablet Screens */
+@media (max-width: 992px) {
+  .tvshow-card {
+      flex: 0 0 calc(30% - 20px); /* Adjust for 3 cards in a row */
+  }
+}
+
+/* Media Query for Mobile Screens */
+@media (max-width: 768px) {
+  .tvshow-container {
+      padding: 10px; /* Reduce padding on smaller screens */
+  }
+  .tv-container h1 {
+      font-size: 1rem;
+  }
+
+  .tvshow-card {
+      flex: 0 0 calc(45% - 10px); /* Adjust for 2 cards in a row with reduced gap */
+  }
+}
+
+.tvshow-poster {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tvshow-poster:hover {
+  box-shadow: 0px 4px 10px rgba(119, 127, 214, 0.461); /* Ensure shadow doesn't affect the radius */
+  /* transform: scale(1.03); */
+}
+
+.tvshow-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px; /* Maintain the border-radius during hover */
+  transition: transform 0.4s ease;
+}
+
+.tvshow-rating {
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  bottom: 2.5rem;
+  width: 50px;
+  margin-bottom: -2.3rem;
+}
+
+.tvshow-info {
+  text-align: left;
+  padding: 10px 0; /* Padding for spacing */
+}
+
+.tvshow-info h3 {
+  font-size: 1rem; /* Adjusted font size for better fit */
+  margin-bottom: 0.5rem;
+  color: #f2f2f2;
+}
+
+.tvshow-info p {
+  font-size: 0.9rem; /* Adjusted font size for better fit */
+  color: #c7c6c6;
+}
+
+
+
+
+
+/* --------------------------------------------------------- All Movies ------------------------------------------------------------------ */
+.movieDisplay {
+  padding: 2rem;
+  background-color: #04152d;
+  transition: transform 0.2s ease-in-out;
+}
+
+.movie-header {
+  position: relative;
+  z-index: 0;
+}
+
+.movies-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.movies-title header {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #ffffff;
+}
+
+.movies-title p {
+  display: flex;
+  gap: 1rem;
+}
+
+.movies-title p span {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  background-color: #04152d;
+  border-radius: 5px;
+  color: #ffffff;
+  transition: background-color 0.3s;
+}
+
+.movies-title p span:hover {
+  background-color: #546e92;
+}
+/* ---------------------------------------- Movie Card Styling ---------------------------------------------------------- */
+
+#movieWrapper {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movie {
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border-radius: 15px; /* Ensure border-radius is applied to the container */
+}
+
+.ratings {
+  background: #ffffff;
+  border-radius: 50%;
+  position: relative;
+  bottom: 2.5rem;
+  width: 50px;
+  margin-bottom: -1.5rem;
+}
+
+.movie-img {
+  width: 100%; 
+  overflow: hidden;
+  border-radius: inherit; /* Inherit the border-radius from the parent (.movie) */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-img:hover {
+  box-shadow: 0px 4px 10px rgba(119, 127, 214, 0.461);
+  /* transform: scale(1.04); */
+}
+
+.movie-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit; /* Inherit the border-radius to maintain consistency */
+  transition: transform 0.3s ease;
+}
+
+.info {
+  text-align: left;
+}
+
+.info h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: #f2f2f2;
+}
+
+.info p {
+  font-size: 1rem;
+  color: #c7c6c6;
+}
+
+
+
+/*  -------------------------------------------------------------single movie -------------------------------------------------------------  */
+.single-movie-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center; /* Center content vertically */
+  justify-content: center; /* Center content horizontally */
+}
+
+.single-movie-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative; /* Ensures content is above the background */
+}
+
+.single-movie-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  z-index: 1; /* Overlay is behind content but above background */
+}
+
+.single-movie-left {
+  flex: 1 1 30%;
+  max-width: 30%;
+  margin-right: 20px;
+}
+
+.single-movie-left img {
+  width: 80%;
+  max-height: 450px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.single-movie-right {
+  flex: 1 1 70%;
+  max-width: 50%;
+  color: #fff; /* Ensures all text in this section is white */
+}
+
+.single-movie-right h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.single-movie-right p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+.single-movie-ratings{
+  width: 50px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+.single-movie-genres ul, .single-movie-languages ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.single-movie-genres li, .single-movie-languages li {
+  background-color: #c91e81;
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #fff;
+}
+
+/* ---------------------------------------------------- Search Results Css ----------------------------------------- */
+
+.search-results-container {
+  height: 100vh;
+  padding: 2rem;
+  background-color: #04152d; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Title */
+.search-results-container h2 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Individual movie item */
+.search-result-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+.search-result-img {
+  width: 90%;
+  overflow: hidden;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.search-result-img:hover{
+  box-shadow: 0px 4px 10px rgba(119, 127, 214, 0.461);
+}
+.search-result-ratings{
+  position: relative;
+  width: 50px;
+  background: #fff;
+  border-radius: 50%;
+  bottom: 2rem;
+  right: 3.5rem;
+  margin-bottom: -1.8rem;
+
+}
+.search-result-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+.search-result-info {
+  text-align:left;
+}
+
+.search-result-info h3 {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #dedddd;
+}
+
+.search-result-info p {
+  font-size: 0.9rem;
+  color: #b6b6b6;
+}
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+  background-color: #282845;
+  border-radius: 50%;
+  z-index: 9999;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 18px;
+  color: white;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #4b4b8c;
+  opacity: 1;
+}
+
+
+/* ------------------------------------------------- Slick Slider Custom Styling ----------------------------------------------------- */
+.slick-slider {
+  position: relative;
+  padding: 0; /* Remove padding to reduce gaps */
+  overflow: hidden;
+}
+
+.slick-list {
+  margin: 0;
+  overflow: hidden;
+}
+
+.slick-slide {
+  padding: 0; /* Remove padding to reduce gaps */
+}
+
+.slick-prev,
+.slick-next {
+  width: 30px;
+  height: 30px;
+  background-color: #282845;
+  border-radius: 50%;
+  z-index: 9999;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.9;
+  transition: opacity 0.3s, background-color 0.3s;
+}
+
+.slick-prev::before,
+.slick-next::before {
+  font-size: 18px;
+  color: white;
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: #4b4b8c;
+  opacity: 1;
+}
+
+
+
+
+
+/* ------------------------------------- Responsive Design for Search Component --------------------------------------- */
+
+/* Adjust layout for tablet screens */
+@media (min-width: 768px) {
+  .search-component {
+      max-width: 80%;
+  }
+
+  .search-component h1 {
+      font-size: 3.5rem;
+  }
+
+  .search-component p {
+      font-size: 1.2rem;
+  }
+
+  .search-component form input {
+      font-size: 1.1rem;
+  }
+
+  .search-component form button {
+      font-size: 1.3rem;
+  }
+}
+
+/* Laptop and larger screens (1024px and above) */
+@media (min-width: 768px) {
+  .search-component {
+      max-width: 80%;
+  }
+
+  .search-component h1 {
+      font-size: 3.5rem;
+  }
+
+  .search-component p {
+      font-size: 1.2rem;
+  }
+
+  .search-component form input {
+      font-size: 1.1rem;
+  }
+
+  .search-component form button {
+      font-size: 1.3rem;
+  }
+}
+
+/* Laptop and larger screens */
+@media (min-width: 1024px) {
+  .search-component {
+      max-width: 600px;
+  }
+
+  .search-component h1 {
+      font-size: 4rem;
+  }
+
+  .search-component p {
+      font-size: 1.1rem;
+  }
+
+  .search-component form input {
+      font-size: 1.2rem;
+  }
+
+  .search-component form button {
+      font-size: 1.2rem;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 767px) {
+
+  .search-component {
+      max-width: 100%;
+  }
+
+  .search-component h1 {
+      font-size: 2rem;
+  }
+
+  .search-component p {
+      font-size: 0.9rem;
+  }
+
+  .search-component form input {
+      width: 60%;
+      padding: 0.80rem;
+      font-size: 0.9rem;
+  }
+  .search-component form button {
+      padding: 0.75rem;
+      font-size: .8rem;
+  }
+}
+
+/* ------------------------------------------------------------------------- Responsive Design for Header ---------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+  header {
+      padding: 0.5rem 1rem;
+  }
+  
+  header ul {
+      gap: 0.5rem;
+  }
+
+  header ul li {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+      padding: 0.5rem;
+  }
+  header h1{
+      font-size: 20px;
+  }
+  header ul {
+      gap: 0.5rem;
+  }
+
+  header ul li {
+      font-size: 0.8rem;
+  }
+}
+
+/* ----------------------------------------------Footer Media------------------------------- */
+@media (max-width: 768px) {
+  footer {
+      padding: 1.5rem 1rem;
+  }
+
+  footer p {
+      width: 100%; /* Avoid fixed width to prevent overflow */
+      font-size: 0.9rem;
+  }
+
+  footer ul {
+      gap: 0.5rem;
+      flex-wrap: wrap; /* Allow wrapping to prevent overflow */
+  }
+
+  footer ul li {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+      padding: 1rem;
+  }
+
+  footer p {
+      width: 100%; /* Avoid fixed width */
+      font-size: 0.6rem;
+      padding: 1rem;
+  }
+
+  footer ul {
+      gap: 0.5rem;
+      flex-wrap: wrap;
+  }
+
+  footer ul li {
+      font-size: 0.8rem;
+  }
+}
+
+
+/* --------------------------------------- For Movies ------------------------------------------ */
+@media (max-width: 1024px) {
+  .slick-slide {
+      padding: 0 5px; /* Adjust padding for tablet screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .slick-slide {
+      padding: 0 5px; /* Adjust padding for mobile screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .slick-slide {
+      padding: 0 5px; /* Adjust padding for extra small mobile screens */
+  }
+}
+
+.movie {
+  overflow: hidden;
+}
+
+.movie-img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+.movie-img img {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Cover the area without distortion */
+}
+
+/* --------------------------------------- For Single Movies ------------------------------------------ */
+@media (max-width: 1024px) {
+  .single-movie-container {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .single-movie-left {
+      max-width: 50%;
+      margin-right: 0;
+      margin-bottom: 20px;
+  }
+
+  .single-movie-left img {
+      width: 100%;
+      max-height: 300px;
+  }
+
+  .single-movie-right {
+      max-width: 90%;
+      text-align: left;
+  }
+
+  .single-movie-right h1 {
+      font-size: 1.8rem;
+  }
+
+  .single-movie-right p {
+      font-size: 0.95rem;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .single-movie-left {
+      max-width: 70%;
+      margin-right: 0;
+      margin-bottom: 15px;
+  }
+
+  .single-movie-right {
+      max-width: 100%;
+  }
+
+  .single-movie-right h1 {
+      font-size: 1.6rem;
+  }
+
+  .single-movie-right p {
+      font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .single-movie-left {
+      max-width: 90%;
+      margin-right: 0;
+      margin-bottom: 10px;
+  }
+
+  .single-movie-left img {
+      width: 100%;
+      max-height: 250px;
+  }
+
+  .single-movie-right h1 {
+      font-size: 1.4rem;
+  }
+
+  .single-movie-right p {
+      font-size: 0.85rem;
+  }
+
+  .single-movie-genres li, .single-movie-languages li {
+      font-size: 0.8rem;
+  }
+}

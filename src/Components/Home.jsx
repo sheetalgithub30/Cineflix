@@ -13,13 +13,6 @@ function Home() {
     const {trendingMoviesByDay , trendingMoviesByWeek, popularTvs , popularMovies , topRatedMovies , topRatedTvs} =  useSelector( (state)=> {
         return state.movieReducer;
     })
-
-    // console.log(initState);
-    // console.log(trendingMoviesByDay);
-    // console.log(trendingMoviesByWeek);
-    // console.log(popularTvs);
-    // console.log(popularMovies);
-    // console.log(topRatedMovies , topRatedTvs);
     
 
     useEffect(()=>{

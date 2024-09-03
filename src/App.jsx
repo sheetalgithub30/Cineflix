@@ -2,7 +2,7 @@ import React from 'react'
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import SearchResults from './Components/SearchResults.jsx'
 import SingleMovie from './Components/SingleMovie.jsx'
-import Tvshows from './components/Tvshows'
+import Tvshows from './Components/Tvshows'
 import Home from './Components/Home.jsx'
 import HeaderMovies from './Components/HeaderMovies.jsx'
 import Header from './Components/Header.jsx'

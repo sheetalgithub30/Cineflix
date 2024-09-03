@@ -6,7 +6,7 @@ function Header() {
     <div>
       <header>
         <Link to='/'>
-          <h1>MovieHub</h1>
+          <h1><span>Cine</span>Flix</h1>
         </Link>
         <ul>
           <li><Link to="/movies">Movies</Link></li>

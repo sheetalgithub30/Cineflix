@@ -1,4 +1,6 @@
 import React from 'react'
+import { FaFacebook, FaInstagram, FaLinkedin } from 'react-icons/fa'
+import { FaXTwitter } from 'react-icons/fa6'
 import { Link } from 'react-router-dom'
 // import "./movies.css"
 
@@ -23,10 +25,10 @@ function Footer() {
 
     <div>
         <ul>
-           <li><Link to="">Linkein</Link></li>
-           <li><Link to="">Facebook</Link></li>
-           <li><Link to="">Twitter</Link></li>
-           <li><Link to="">Instagram</Link></li>
+           <li><Link to=""><FaLinkedin/></Link></li>
+           <li><Link to=""><FaFacebook /></Link></li>
+           <li><Link to=""><FaXTwitter /></Link></li>
+           <li><Link to=""><FaInstagram /></Link></li>
         </ul>
 
     </div>

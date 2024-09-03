@@ -19,8 +19,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem;
-  backdrop-filter: blur(5px);
+  padding: 2rem;
+  backdrop-filter: blur(6px);
   color: black;
   z-index: 1000;
   width: 100%;
@@ -29,7 +29,14 @@ header {
   left: 0;
 }
 header h1{
-  font-size: 1.7rem;
+  font-size: 2rem;
+   
+}
+header h1 span{
+  color: red;
+}
+header a{
+  text-decoration: none;
 }
 
 
@@ -68,12 +75,17 @@ footer p {
   color: #bfbdbd;
 }
 
+footer a{
+  text-decoration: none;
+}
+
 footer ul {
   display: flex;
   gap: 1rem;
 }
 footer ul li{
   color: #fff;
+  font-size: 1.4rem;
 }
 
 /* ------------------------------------------- Search Section Styling --------------------------------------------- */

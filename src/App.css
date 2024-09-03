@@ -19,7 +19,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 5rem 0rem 5rem;
   backdrop-filter: blur(6px);
   color: black;
   z-index: 1000;
